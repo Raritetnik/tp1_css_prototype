@@ -1,0 +1,25 @@
+.btn__Membre {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color:rgba(0,0,0,0.5) ;
+}
+
+.section__articles {
+    display: flex;
+    justify-content: baseline;
+    align-items: flex-start;
+    gap: 20px;
+
+}
+
+.section__articles>article {
+    flex-basis: 100%;
+}
+
+.img__article {
+    min-height: 300px;
+    min-width: 100%;
+    border: 2px solid rgba(0,0,0,0.4);
+}
