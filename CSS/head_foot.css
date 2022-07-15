@@ -1,6 +1,6 @@
 /* Règles génériques ----------------------- */
 
-	/* Rétablir les marges
+/* Rétablir les marges
 intérieures & extérieures sur tout */
 * {
     margin: 0;
@@ -9,8 +9,17 @@ intérieures & extérieures sur tout */
 
 /* Rythme vertical de base
     pour tous les éléments de contenu */
-*+p, *+img, *+header, *+section, h1, *+footer
-*+h1, *+h2, *+h3, *+h4, *+h5, *+h6 {
+*+p,
+*+img,
+*+header,
+*+section,
+h1,
+*+footer *+h1,
+*+h2,
+*+h3,
+*+h4,
+*+h5,
+*+h6 {
     margin-top: 20px;
 }
 
@@ -23,33 +32,35 @@ html {
 
 /* Interlignage propre aux titres
     (moins espacé que le contenu courant) */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     line-height: 1.25em;
 }
 
 /* Style « prototype »
     pour les images vides */
 img {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(to top left,
-            rgba(0,0,0,0) 0%,
-            rgba(0,0,0,0) calc(50% - 1px),
-            rgba(0,0,0,.1) 50%,
-            rgba(0,0,0,0) calc(50% + 1px),
-            rgba(0,0,0,0) 100%),
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) calc(50% - 1px),
+            rgba(0, 0, 0, .1) 50%,
+            rgba(0, 0, 0, 0) calc(50% + 1px),
+            rgba(0, 0, 0, 0) 100%),
         linear-gradient(to top right,
-            rgba(0,0,0,0) 0%,
-            rgba(0,0,0,0) calc(50% - 1px),
-            rgba(0,0,0,.1) 50%,
-            rgba(0,0,0,0) calc(50% + 1px),
-            rgba(0,0,0,0) 100%);
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0) calc(50% - 1px),
+            rgba(0, 0, 0, .1) 50%,
+            rgba(0, 0, 0, 0) calc(50% + 1px),
+            rgba(0, 0, 0, 0) 100%);
     border-radius: 3px;
 }
-
-/* Base « prototype » pour les éléments enligne
-    utilisés seuls (sans parent textuel — p. ex. <p>) */
-a, small {
+/* Enleve le visuel d'un lien pour apporter des modifications personels*/
+a {
     text-decoration: none;
+    color: black;
 }
 
 /* Largeur maximale de toute
@@ -58,11 +69,13 @@ p {
     max-width: 85ch;
 }
 
+/* Division sur les section de la page */
 section {
     position: relative;
     min-height: 300px;
 }
 
+/* Espacement du contenu */
 main {
     display: flex;
     flex-direction: column;
@@ -70,21 +83,25 @@ main {
     margin: 0 auto;
 }
 
-/** -----------------------------------------------------------  */
+/* -------- Configuration Menu Principale ----------  */
+
+/* Créer un espace vide pour entre deux élèments du menu
+pour un séparation adéquate à mesure */
 .headMenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     height: 120px;
 }
-
+/* La taille de l'icone à droite pour ne pas sortir du menu*/
 .headMenu .logo {
     margin-right: auto;
     width: 120px;
     height: 120px;
 }
 
+/* Mise du texte du menu en gros en ligne */
 .headMenu a {
     position: relative;
     padding: 10px;
@@ -95,18 +112,15 @@ main {
 
     transition: 1s;
 }
-
+/* Réaction au cursor par dessus les élèments du menu */
 .headMenu a:hover {
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0, 0, 0, .9);
     color: aliceblue;
     transition: 1s;
 }
 
-/**********************************************************/
-
-.sousMenu>a::not(:hover) {
-
-}
+/******** Configuration de sous-menu ************/
+/* Placement des boutons à l'extérieur de balise menu */
 .sousMenu__contenu {
     display: none;
     position: absolute;
@@ -118,88 +132,91 @@ main {
     width: 100%;
     z-index: 1;
 }
-
-.sousMenu__contenu>a{
+ /* Configuration des boutons du sous menu,
+    qu'ils soyent lisibles  */
+.sousMenu__contenu > a {
     color: aliceblue;
     padding: 46px 10px;
 }
 
-.sousMenu__contenu a:hover {
-}
-
+/* Réaction sur cursor, background color plus grand
+et foncé que la bare de sous-menu, pour une lisibilité de réaction*/
 .sousMenu:hover .sousMenu__contenu {
     display: block;
 }
 
-/************************************************************/
-
+/***************************************/
+/* L'image de header representatif du site */
 .header__img {
     width: 100%;
     height: 300px;
     justify-content: center;
 }
-
+/* place le texte par dessus l'image de header */
 .contenu-sur-image {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
-	position: relative;
-	min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    min-height: 60vh;
 }
-
+/* Redimention et ajoute une transparance pour
+la lisibilité du texte au milieu*/
 .contenu-sur-image>img {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-	opacity: 0.6;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
 }
-
+/* Ajustement automatique du contenu à l'intérieur
+de l'image*/
 .contenu-sur-image>* {
-	position: relative;
-	margin: 0;
+    position: relative;
+    margin: 0;
 }
-
+/* Ajustement des limites et de taille du texte sur l'image */
 .contenu-sur-image p {
-	font-size: 1.4em;
-	max-width: 50ch;
-	text-align: center;
+    font-size: 1.4em;
+    max-width: 50ch;
+    text-align: center;
 }
 
+/* Espacement du contenu 20px de menu principal */
 .contenu-sur-image>*+* {
-	margin-top: 20px;
+    margin-top: 20px;
 }
-
+/* Division de la page par sections pour les contenant qui offre une cohérence du contenu*/
 .section__info {
-    background-color:rgba(0,0,0,0.1) ;
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 0 20px;
     box-shadow: 10px 10px 20px #888888;
     padding-bottom: 20px;
 }
 
+/* Espacement du texte pour une lisibilité */
 .section__titre {
     margin-top: 50px;
 }
 
-/** -----------------------------------------------------------  */
+/** --------- Deuxième Menu --------------  */
 
+/* Preciser la tailler de footer pour rentrer le deuxième menu et centraliser le contenu */
 footer {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     min-height: 200px;
     margin-top: 50px;
 }
 
+/* Divise en 3 le menu en sections de contenu séparé */
 .footer__menu {
     display: flex;
     justify-content: space-around;
 }
 
-.footer__menu a {
-    color: black;
-}
-
+/* Place les élèments en columne pour le comfort */
 .footer__menu div {
     margin-top: 30px;
     display: flex;
@@ -208,6 +225,8 @@ footer {
     text-decoration: none;
     font-size: 1.3em;
 }
+
+/* Basique paramètres pour le titre */
 .titre {
     font-weight: bold;
     font-size: 1.3em;
