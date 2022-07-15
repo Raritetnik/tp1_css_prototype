@@ -1,0 +1,41 @@
+Menu Principale:
+
+	Le menu principale est composé de deux élèments, l'icon representatif
+de la Zoo à gauche et un menu à droite de manière habituelle pour l'utilisateur.
+De cette façon l'utilisateur comprend machinalement ou regarder pour avoir un
+choix de pages et le LOGO de la compagnie Zoo. Les boutons réagisent sur le cursor
+de l'utilisateur en changant la couleur totalement opposé à la couleur du menu par
+defaut, qui permet de distenger visuellement son choix, avec un transition 
+qui ajoute ue lisse à l'interface.
+
+	Le sous menu est placé plus bas que le menu principal, avec un effet 
+d'attachement. Le sous-menu est placé en ligne horizontal pour ne pas cacher 
+le header representatif de la page. Les boutons de réagissent au cursor en 
+deventant plus foncé sur le fond noir et un peu plus grand que la bare de 
+sous-menu pour distinguer plus facilement le bouton choisier parmis 
+les autres élèments.
+
+
+Header:
+	L'image répresantatif du site, qui fait crier et saluer l'utilisateur par un
+message centralisér. Le texte est mit au centre pour tomber sur les yeux de 
+l'utilisateur en premier. Le bouton placé avec le texte encourage l'utilisater de
+devenir membre, fait tomber sur les yeux.
+
+Contenu caroussel:
+ 	Les blocs d'articles placé en ordre pour illustrer le choix des options. Le texte est placé en haut
+comme un titre de la page, que ça soit plus habituelle à l'utilisateur. Une image accompagne le texte pour
+montrer le sujet de la thème des options. Le texte est mise à l'extérieur de l'image pour plus de lisibilité.
+
+Boîtes de texte:
+	Le bloc de texte se démarque d'un couleur de boîte plus foncé, pour montrer à l'utilisateur
+un changement de contenu, qu'il soit prêt à ceci. Le contenu a passé de block des images avec les titres au bloc de texte
+informatif sans images, ou un seul.
+
+
+Deuxième menu:
+
+	Le deuxième menu est placé à la fin de la page dans le pied de page, comme une suite de choix après la
+lecture de la page principale. Le menu est divisé en 3 catégorie qui ont chaqun un sujet avec leur propre sous-sujet
+placé plus bas en plus petit lettres. Le menu dans le pied de page, ne laisse pas l'utilisateur avec rien à la fin de contenu
+et permet de poursuivre le contenu du site de Zoo.
